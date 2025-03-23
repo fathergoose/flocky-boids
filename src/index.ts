@@ -1,13 +1,12 @@
 import "./styles.css";
 
 (function () {
-  function example(): void {
-    console.log("hello typescript");
-  }
+  const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+  const ctx = canvas.getContext("2d");
 
-  example();
-
-  document.getElementById("example").addEventListener("click", () => {
-    alert("Button Clicked");
-  });
+  ctx.beginPath();
+  ctx.moveTo(50, 50);
+  ctx.lineTo(65, 45);
+  ctx.lineTo(65, 55);
+  ctx.fill();
 })();

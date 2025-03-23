@@ -1,3 +1,14 @@
-h1 {
-  color: #999;
+/*canvas {*/
+/*  height: 500px;*/
+/*  width: 500px;*/
+/*  position: absolute;*/
+/*}*/
+
+html {
+  background: #eee;
+}
+.wrapper {
+  border: 1px solid #000;
+  display: inline-block;
+  background: #fff;
 }

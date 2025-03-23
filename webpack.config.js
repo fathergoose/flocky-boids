@@ -6,9 +6,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      title: "A webpack starter pkg",
-      header: "Fun with webpack",
-      metaDesc: "A base project for the web",
+      title: "Boid Flocking Sim",
+      header: "Flocky Boids!",
+      metaDesc: "Boid Flocking Sim",
       template: "src/index.html",
       filename: "index.html",
       inject: "body",
