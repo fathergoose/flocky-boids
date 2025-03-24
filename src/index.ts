@@ -16,15 +16,15 @@ interface Boid {
 function drawBoid(boid: Boid): Path2D {
   // TODO: Create a function that translates a boid's "position" to a path value
   // and also convert it's heading to the appropriate rotation
-  const p = new Path2D("M0 10 L30 0 L25 10 L30 20Z");
+  return new Path2D("M0 10 L30 0 L25 10 L30 20Z");
 }
 
 // TODO: Create a function for incrimenting a boid's position based on it's velocity
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d");
-point(ctx, (Math.PI * 3) / 2);
 // Translate in the direction the boid is pointing
-const dy = Math.sin(theta);
+point(ctx, (Math.PI * 3) / 2);
+drawBoid();
 
 ctx.fill(p);
