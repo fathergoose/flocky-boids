@@ -13,7 +13,7 @@ interface Boid {
   speed: number;
 }
 
-function drawBoid(boid: Boid): Path2D {
+function drawBoidPath(boid: Boid): Path2D {
   // TODO: Create a function that translates a boid's "position" to a path value
   // and also convert it's heading to the appropriate rotation
   return new Path2D("M0 10 L30 0 L25 10 L30 20Z");
@@ -25,6 +25,12 @@ const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d");
 // Translate in the direction the boid is pointing
 point(ctx, (Math.PI * 3) / 2);
-drawBoid();
+const boid: Boid = {
+  xPos: 100,
+  yPos: 100,
+  heading: 0,
+  speed: 10,
+};
+const p = drawBoidPath(boid);
 
 ctx.fill(p);
