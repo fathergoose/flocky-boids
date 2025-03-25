@@ -24,13 +24,16 @@ function drawBoidPath(boid: Boid): Path2D {
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d");
 // Translate in the direction the boid is pointing
-point(ctx, (Math.PI * 3) / 2);
 const boid: Boid = {
   xPos: 100,
   yPos: 100,
   heading: 0,
   speed: 10,
 };
+point(ctx, boid.heading);
 const p = drawBoidPath(boid);
 
 ctx.fill(p);
+
+// TODO: Create draw/rendering loop with save, write, clear, & restore
+//
